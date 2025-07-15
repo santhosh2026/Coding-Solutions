@@ -1,0 +1,18 @@
+Divisable by 13 java solution.
+Given a number represented as a string s (which may be very large), check whether it is divisible by 13 or not.
+
+
+class Solution {
+    public boolean divby13(String s) {
+        int num = 0;
+        for(int i=0;i<s.length();i++)
+        {
+            num = (num*10+(s.charAt(i)-'0'))%13;  // for every iteration find the modulo number so it reduce the size of the number stored in the num variable.
+        }
+        if(num == 0)      //check if the number is 0 the return true else return false.
+        {
+            return true;
+        }
+        return false;
+    }
+}
